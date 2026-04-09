@@ -1,0 +1,45 @@
+# Environnement
+.env
+.env.*
+
+# Environnements virtuels
+venv/
+.venv/
+env/
+
+# Cache Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Build / distribution
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Tests / couverture
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Outils d'analyse / type checking
+.mypy_cache/
+.ruff_cache/
+.pyre/
+
+# Journaux et runtime
+*.log
+*.pid
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE / éditeurs
+.vscode/
+.idea/
+
+# Système
+.DS_Store
+Thumbs.db
