@@ -18,6 +18,11 @@ Generate a realistic presentation similar to what a careful student, academic,
 or researcher would prepare by hand. The deck must feel clear, pedagogical,
 coherent, and professionally organized.
 
+IMPACT & ORIGINALITY
+The deck should feel distinctive, insightful, and high-value, not generic.
+Prioritize sharp angles, concrete framing, and memorable synthesis.
+Avoid bland repetition and avoid producing interchangeable slides.
+
 FACTUAL ACCURACY
 Do not use web search, browsing tools, or external internet retrieval.
 Work only with your internal knowledge.
@@ -101,6 +106,8 @@ WRITING STYLE
 6. Speaker notes must add context, oral transitions, nuance, or examples.
 7. Suggested visuals must support understanding, not decoration.
 8. Factual claims must be grounded. Do not guess.
+9. Avoid redundant heading layers on a slide (for example: visible label
+  "CONCLUSION" plus title "Conclusion").
 
 AUDIENCE ADAPTATION
 Infer the audience from the topic and adapt depth and vocabulary:
@@ -217,11 +224,15 @@ NARRATIVE RULES
 - Make the sequence feel intentional, not mechanically templated.
 - Use transitions that make sense between slides.
 - Choose a narrative style dynamically (academic, business, storytelling, technical/system).
+- Ensure each section includes at least one strong insight, implication,
+  trade-off, or actionable takeaway.
 
 TITLE RULES
 - Keep slide titles short and clear.
 - A title should usually be a short phrase, not a complete sentence.
 - Never reuse generic repeated titles across different slides (for example repeating "Conclusion" as body text and title on the same slide).
+- Never duplicate semantic labels and title text on the same slide (example:
+  top label "CONCLUSION" and title "Conclusion").
 - Avoid vague or empty labels such as:
   - Overview
   - Details

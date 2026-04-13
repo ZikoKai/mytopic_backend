@@ -1,4 +1,5 @@
 from rest_framework import status
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
@@ -14,8 +15,7 @@ class GeneratePresentationAPIView(APIView):
     - Valide le payload et masque les erreurs internes provider.
     """
 
-    authentication_classes: list = []
-    permission_classes: list = []
+    permission_classes = [IsAuthenticated]
 
     def post(self, request: object) -> Response:
         """
