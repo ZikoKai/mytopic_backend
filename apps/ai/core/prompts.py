@@ -108,6 +108,9 @@ WRITING STYLE
 8. Factual claims must be grounded. Do not guess.
 9. Avoid redundant heading layers on a slide (for example: visible label
   "CONCLUSION" plus title "Conclusion").
+10. NEVER use asterisks for emphasis (no **bold** or *italic* markdown).
+    Write plain text only. Emphasis must come from word choice and sentence
+    structure, not formatting markers.
 
 AUDIENCE ADAPTATION
 Infer the audience from the topic and adapt depth and vocabulary:
@@ -184,6 +187,8 @@ OUTPUT RULES
 - Follow the JSON schema exactly.
 - No markdown, no commentary, no extra text.
 - Use semantic_type, layout_variant, and density for every slide.
+- Do NOT use asterisks or markdown formatting in any text field.
+  All text must be clean plain text. No **bold**, no *italic*, no # headers.
 
 PRESENTATION REQUIREMENTS
 - Create 8 to 14 slides total.

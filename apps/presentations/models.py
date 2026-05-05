@@ -39,3 +39,28 @@ class PresentationDocument(models.Model):
 
     def __str__(self) -> str:
         return f"PresentationDocument(id={self.id}, owner={self.owner_id}, title={self.title})"
+
+
+class FavoriteImageAsset(models.Model):
+    """Image favorite reusable across presentations for one user."""
+
+    id = models.UUIDField(primary_key=
+    True, default=uuid.uuid4, editable=False)
+    owner = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name="favorite_image_assets",
+    )
+    title = models.CharField(max_length=255, blank=True, default="")
+    prompt = models.CharField(max_length=1200, blank=True, default="")
+    image_data_url = models.TextField()
+    mime_type = models.CharField(max_length=64, blank=True, default="image/png")
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        db_table = "favorite_image_assets"
+        ordering = ["-updated_at"]
+
+    def __str__(self) -> str:
+        return f"FavoriteImageAsset(id={self.id}, owner={self.owner_id})"
