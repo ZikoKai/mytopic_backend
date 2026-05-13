@@ -1,7 +1,11 @@
 from apps.ai.services import AIClientError, build_image_from_prompt, build_presentation
 
 
-def generate_topic_presentation(topic: str, language: str | None) -> dict:
+def generate_topic_presentation(
+    topic: str,
+    language: str | None,
+    user: object | None = None,
+) -> dict:
     """
     Service metier presentations.
 
@@ -11,7 +15,7 @@ def generate_topic_presentation(topic: str, language: str | None) -> dict:
     Securite:
     - Point d'orchestration unique pour encapsuler les erreurs AI.
     """
-    return build_presentation(topic=topic, language=language)
+    return build_presentation(topic=topic, language=language, user=user)
 
 
 def generate_image_for_presentation(prompt: str, size: str = "1024x1024") -> dict[str, str]:

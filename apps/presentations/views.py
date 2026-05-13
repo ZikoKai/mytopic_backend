@@ -48,6 +48,7 @@ class GeneratePresentationAPIView(APIView):
             data = generate_topic_presentation(
                 topic=payload["topic"],
                 language=payload.get("language") or None,
+                user=request.user,
             )
         except AIClientError as exc:
             return Response({"detail": str(exc)}, status=status.HTTP_502_BAD_GATEWAY)

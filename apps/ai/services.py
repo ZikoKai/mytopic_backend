@@ -1,7 +1,12 @@
-from apps.ai.core.ai_client import AIClientError, generate_image, generate_presentation
+from apps.ai.core.ai_client import AIClientError, generate_image
+from apps.ai.orchestrator import AIService
 
 
-def build_presentation(topic: str, language: str | None = None) -> dict:
+def build_presentation(
+    topic: str,
+    language: str | None = None,
+    user: object | None = None,
+) -> dict:
     """
     Facade AI pour la generation de presentation.
 
@@ -11,7 +16,7 @@ def build_presentation(topic: str, language: str | None = None) -> dict:
     Securite:
     - Delègue a un service valide qui applique parse + validation du contrat.
     """
-    return generate_presentation(topic=topic, language=language)
+    return AIService(user=user).generate_presentation(topic=topic, language=language)
 
 
 def build_image_from_prompt(prompt: str, size: str = "1024x1024") -> dict[str, str]:
